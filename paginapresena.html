@@ -1,0 +1,132 @@
+<div class="formulario-container">
+    <h2>Confirmação de Presença</h2>
+       <style>
+        /* CSS para o Estilo do Formulário (Coerente com o Convite) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7a8b8; /* Fundo Rosa Suave */
+            
+            /* Fundo com Cerejeiras (usando um gradiente suave e a imagem da flor) */
+            background-image: 
+                url('images/sakura_fundo.png'), /* Use uma imagem de cerejeira sutil */
+                linear-gradient(to bottom, #f7a8b8, #e08b98); /* Gradiente rosa */
+            background-repeat: repeat;
+            background-size: 150px, cover; 
+        }
+        
+        /* Efeito de Vidro Fosco/Blur no Contêiner Principal */
+        .formulario-container {
+            /* Fundo levemente transparente */
+            background-color: rgba(255, 255, 255, 0.4); 
+            color: #8c2637;
+            padding: 40px 30px;
+            width: 90%;
+            max-width: 450px;
+            border-radius: 10px;
+            
+            /* O EFEITO BLUR: Desfoca o que está atrás deste elemento */
+            backdrop-filter: blur(8px); 
+            -webkit-backdrop-filter: blur(8px); /* Compatibilidade com navegadores antigos */
+            
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil de vidro */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #8c2637;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #8c2637;
+        }
+        
+        /* Estilização dos Campos de Entrada (Input e Select) */
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            box-sizing: border-box;
+            
+            /* Design Minimalista e Levemente Transparente */
+            background-color: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+            border-radius: 5px;
+            
+            /* Adiciona um toque de sombra e desfoque ao próprio campo (opcional, mas moderno) */
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+             background-color: white; /* Fica opaco ao focar */
+             outline: none;
+             border: 1px solid #8c2637;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: normal;
+        }
+
+        .botao-enviar {
+            width: 100%;
+            padding: 15px;
+            background-color: #d394c5; /* Amarelo de Destaque */
+            color: #8c2637;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .botao-enviar:hover {
+            background-color: #ffd633;
+        }
+    </style>
+</head>
+
+    <form action="https://formspree.io/f/xblzlqop" method="POST">
+        
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="Nome" required placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group">
+            <label>Você comparecerá?</label>
+            <div class="radio-group">
+                <input type="radio" id="sim" name="Presenca" value="Sim" required>
+                <label for="sim">Sim</label>
+                <input type="radio" id="nao" name="Presenca" value="Não">
+                <label for="nao">Não</label>
+            </div>
+        </div>
+        <button type="submit" class="botao-enviar">ENVIAR CONFIRMAÇÃO</button>
+    </form>
+</div>

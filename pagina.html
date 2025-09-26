@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80 Anos da Leiko - Convite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7a8b8; /* Cor de fundo suave */
+        }
+
+        .convite-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Largura máxima para visualização em desktop */
+            /* A altura deve ser ajustada para a proporção da imagem se for usada como background */
+            /* Se a imagem for usada como <img>, a altura será automática */
+        }
+
+        .imagem-convite {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .area-interativa {
+            position: absolute;
+            bottom: 10%; /* Ajuste a posição vertical do botão */
+            top: 110%;
+            transform: translateX(10%); /* Centraliza horizontalmente */
+            width: 80%; /* Largura do botão */
+            text-align: center;
+        }
+
+        .botao-confirmar {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #8c2637; /* Cor de Destaque (Vinho) */
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .botao-confirmar:hover {
+            background-color: #a3384a;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="convite-container">
+    <img src="img/Gemini_Generated_Image_9uhbpr9uhbpr9uhb.png" alt="Convite 80 Anos da Leiko" class="imagem-convite">
+
+    <div class="area-interativa">
+        <a href="paginapresena.html" class="botao-confirmar">CONFIRMAR PRESENÇA</a>
+    </div>
+</div>
+
+</body>
+</html>
